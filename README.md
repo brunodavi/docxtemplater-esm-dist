@@ -1,19 +1,24 @@
 # docxtemplater-esm-bundle
 
 Projeto que converteu a biblioteca [docxtemplater](https://docxtemplater.com/) para um bundle ESM utilizando `esbuild --format=esm --bundle`.  
-Ideal para uso direto em navegadores ou via CDN (exemplo com [jsdelivr](https://www.jsdelivr.com/)).
+Ideal para uso direto em navegadores ou via CDN (exemplo com [jsdelivr](https://www.jsdelivr.com/)) dessa forma:
 
-## Como usar
+```
+import { generateDocument } from 'https://cdn.jsdelivr.net/gh/brunodavi/docxtemplater-esm-dist@main/dist/docxtemplater.bundle.mjs'
+```
 
-Você pode importar o bundle diretamente do CDN:
+## Como Usar
+
+
+Ele gerou essa função como bunlde
 
 ```js
-import PizZip from 'https://cdn.jsdelivr.net/gh/SEU_USUARIO/docxtemplater-esm-bundle/dist/pizzip.mjs';
-import Docxtemplater from 'https://cdn.jsdelivr.net/gh/SEU_USUARIO/docxtemplater-esm-bundle/dist/docxtemplater.bundle.mjs';
+import PizZip from 'pizzip';
+import Docxtemplater from 'docxtemplater';
 
 /**
  * Gera um documento .docx a partir de um template e dados, com opções configuráveis.
- * @param {ArrayBuffer | string} content - O conteúdo do arquivo de template .docx.
+ * * @param {ArrayBuffer | string} content - O conteúdo do arquivo de template .docx.
  * @param {object} data - O objeto com os dados para preencher o template.
  * @param {object} [docxtemplaterOptions={}] - Opções para o construtor do Docxtemplater.
  * @property {boolean} [paragraphLoop=true] - Habilita loops em parágrafos.
@@ -21,7 +26,7 @@ import Docxtemplater from 'https://cdn.jsdelivr.net/gh/SEU_USUARIO/docxtemplater
  * @param {object} [outputOptions={}] - Opções para a geração do arquivo de saída pelo PizZip.
  * @property {'base64' | 'uint8array' | 'string' | 'nodebuffer' | 'blob'} [type='base64'] - O formato do arquivo de saída.
  * @property {'DEFLATE' | 'STORE'} [compression='DEFLATE'] - O tipo de compressão.
- * @returns {string | Uint8Array | object} - O documento gerado, no formato especificado em `outputOptions.type`.
+ * * @returns {string | Uint8Array | object} - O documento gerado, no formato especificado em `outputOptions.type`.
  */
 export function generateDocument(
     content,
@@ -61,3 +66,4 @@ export function generateDocument(
         throw error;
     }
 }
+```

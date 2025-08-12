@@ -9,9 +9,6 @@ import { generateDocument } from 'https://cdn.jsdelivr.net/gh/brunodavi/docxtemp
 
 ## Como Usar
 
-
-Ele gerou essa função como bunlde
-
 ```js
 import PizZip from 'pizzip';
 import Docxtemplater from 'docxtemplater';

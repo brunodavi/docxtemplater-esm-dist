@@ -3,7 +3,7 @@
 Projeto que converteu a biblioteca [docxtemplater](https://docxtemplater.com/) para um bundle ESM utilizando `esbuild --format=esm --bundle`.  
 Ideal para uso direto em navegadores ou via CDN (exemplo com [jsdelivr](https://www.jsdelivr.com/)) dessa forma:
 
-```
+```js
 import { generateDocument } from 'https://cdn.jsdelivr.net/gh/brunodavi/docxtemplater-esm-dist@main/dist/docxtemplater.bundle.mjs'
 ```
 
